@@ -20,7 +20,13 @@
  },
  "urls": [],
  "tags": [],
- "meta": [],
+ "meta": [
+  {
+   "kind": "Pair",
+   "key": "PUBLISHED",
+   "value": "true"
+  }
+ ],
  "url": {
   "kind": "Url",
   "uri": ""
@@ -38,15 +44,21 @@
   },
   {
    "kind": "Link",
-   "id": "d28bf61e-e274-4ea4-847e-f498caac8d59",
+   "id": "5a2e8de4-612c-46e8-8f31-a38bc4ae4801",
+   "inputId": "a23f91fd-438b-4b94-b8df-57f5bac2fd3c-i-0",
+   "outputId": "7cedfb25-5e36-4cdd-9b5d-8d35d8d70a04-o-0"
+  },
+  {
+   "kind": "Link",
+   "id": "d3edaaca-7bdd-4973-b213-246087651cd0",
    "inputId": "bd940613-8a25-418c-a1ef-826f37924af8-i-0",
    "outputId": "f253f583-39a2-470e-94e5-d5673b363874-o-0"
   },
   {
    "kind": "Link",
-   "id": "7b771b82-a33c-41b5-bb11-34ca337b32e6",
+   "id": "772c44ff-a7e6-4165-ba61-4147804a2262",
    "inputId": "f253f583-39a2-470e-94e5-d5673b363874-i-0",
-   "outputId": "04a8fcc8-149a-46cb-864d-3da043cb5eca-o-0"
+   "outputId": "df01fde6-124b-48e4-ae67-8af5d9fb17fd-o-0"
   }
  ],
  "steps": [
@@ -244,7 +256,7 @@
        "filterExprs": [
         {
          "kind": "FilterExpr",
-         "filterOp": "greatereq",
+         "filterOp": "greater",
          "stringValue": "1.3",
          "factor": {
           "kind": "Factor",
@@ -330,7 +342,7 @@
    },
    "computedRelation": {
     "kind": "Relation",
-    "id": "202c5818-87ea-4be2-ace7-526c34dd0614"
+    "id": "489b96b0-8124-49be-b092-34b9ce989860"
    },
    "parentDataStepId": ""
   },
@@ -743,7 +755,7 @@
    },
    "computedRelation": {
     "kind": "Relation",
-    "id": "770eafef-d200-4f8a-99c2-ec29ee4852d4"
+    "id": "1f89573e-ef65-4c64-a0ed-21ea092edc8a"
    },
    "parentDataStepId": ""
   },
@@ -1008,14 +1020,50 @@
    }
   },
   {
+   "kind": "ViewStep",
+   "id": "a23f91fd-438b-4b94-b8df-57f5bac2fd3c",
+   "groupId": "",
+   "name": "View",
+   "inputs": [
+    {
+     "kind": "InputPort",
+     "id": "a23f91fd-438b-4b94-b8df-57f5bac2fd3c-i-0",
+     "linkType": "any",
+     "name": "in"
+    }
+   ],
+   "outputs": [],
+   "rectangle": {
+    "kind": "Rectangle",
+    "extent": {
+     "kind": "Point",
+     "x": 88.99000000000001,
+     "y": 55.0
+    },
+    "topLeft": {
+     "kind": "Point",
+     "x": 260.505,
+     "y": 387.5
+    }
+   },
+   "state": {
+    "kind": "StepState",
+    "taskId": "",
+    "taskState": {
+     "kind": "InitState"
+    }
+   },
+   "description": "Used to define view in a sub workflow."
+  },
+  {
    "kind": "InStep",
-   "id": "04a8fcc8-149a-46cb-864d-3da043cb5eca",
+   "id": "df01fde6-124b-48e4-ae67-8af5d9fb17fd",
    "groupId": "",
    "name": "Input",
    "inputs": [
     {
      "kind": "InputPort",
-     "id": "04a8fcc8-149a-46cb-864d-3da043cb5eca-i-0",
+     "id": "df01fde6-124b-48e4-ae67-8af5d9fb17fd-i-0",
      "linkType": "any",
      "name": "from"
     }
@@ -1023,7 +1071,7 @@
    "outputs": [
     {
      "kind": "OutputPort",
-     "id": "04a8fcc8-149a-46cb-864d-3da043cb5eca-o-0",
+     "id": "df01fde6-124b-48e4-ae67-8af5d9fb17fd-o-0",
      "linkType": "any",
      "name": "to"
     }
@@ -1037,8 +1085,8 @@
     },
     "topLeft": {
      "kind": "Point",
-     "x": 270.505,
-     "y": 10.5
+     "x": 260.505,
+     "y": 9.5
     }
    },
    "state": {
