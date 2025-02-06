@@ -1,6 +1,6 @@
 {
  "kind": "Workflow",
- "id": "2",
+ "id": "1",
  "isDeleted": false,
  "rev": "",
  "description": "",
@@ -277,7 +277,7 @@
       "kind": "OperatorRef",
       "name": "Order By",
       "version": "0.1.5",
-      "operatorId": "1",
+      "operatorId": "0",
       "operatorKind": "ROperator",
       "propertyValues": [
        {
@@ -589,8 +589,8 @@
      "operatorRef": {
       "kind": "OperatorRef",
       "name": "Plot",
-      "version": "0.1.6",
-      "operatorId": "0",
+      "version": "0.2.0",
+      "operatorId": "2",
       "operatorKind": "ROperator",
       "propertyValues": [
        {
@@ -626,12 +626,12 @@
        {
         "kind": "PropertyValue",
         "name": "xlab",
-        "value": "Kinase Name"
+        "value": ""
        },
        {
         "kind": "PropertyValue",
         "name": "ylab",
-        "value": "Fold Change"
+        "value": ""
        },
        {
         "kind": "PropertyValue",
@@ -651,7 +651,7 @@
        {
         "kind": "PropertyValue",
         "name": "legend.title",
-        "value": "Specificity Score"
+        "value": ""
        },
        {
         "kind": "PropertyValue",
@@ -681,7 +681,7 @@
        {
         "kind": "PropertyValue",
         "name": "flip",
-        "value": "true"
+        "value": "false"
        },
        {
         "kind": "PropertyValue",
@@ -710,9 +710,72 @@
       },
       "operatorSpec": {
        "kind": "OperatorSpec",
-       "ontologyUri": "",
-       "ontologyVersion": "",
-       "inputSpecs": [],
+       "ontologyUri": "https://tercen.com/_ontology/tercen",
+       "ontologyVersion": "0.0.1",
+       "inputSpecs": [
+        {
+         "kind": "CrosstabSpec",
+         "metaFactors": [
+          {
+           "kind": "MetaFactor",
+           "name": "page",
+           "type": "",
+           "description": "",
+           "ontologyMapping": "page",
+           "crosstabMapping": "row",
+           "cardinality": "",
+           "factors": []
+          },
+          {
+           "kind": "MetaFactor",
+           "name": "row factor",
+           "type": "",
+           "description": "",
+           "ontologyMapping": "sample",
+           "crosstabMapping": "row",
+           "cardinality": "",
+           "factors": []
+          },
+          {
+           "kind": "MetaFactor",
+           "name": "column factor",
+           "type": "",
+           "description": "",
+           "ontologyMapping": "variable",
+           "crosstabMapping": "column",
+           "cardinality": "",
+           "factors": []
+          }
+         ],
+         "axis": [
+          {
+           "kind": "AxisSpec",
+           "metaFactors": [
+            {
+             "kind": "MetaFactor",
+             "name": "y axis factor",
+             "type": "numeric",
+             "description": "",
+             "ontologyMapping": "y-axis",
+             "crosstabMapping": "y",
+             "cardinality": "1",
+             "factors": []
+            },
+            {
+             "kind": "MetaFactor",
+             "name": "x axis factor",
+             "type": "",
+             "description": "",
+             "ontologyMapping": "x-axis",
+             "crosstabMapping": "x",
+             "cardinality": "1",
+             "factors": []
+            }
+           ]
+          }
+         ]
+        }
+       ],
        "outputSpecs": []
       }
      },
